@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shortened URL</title>
+    <title>Shortened url page</title>
 </head>
 <body>
 
-    <h1>Your Shortened URL</h1>
-    <p>Shortened URL: {{ short_url }} </p>
+    <h1>This is short URL page</h1>
 
-    <a href="{% url 'add_url' %}"> Back </a>
+    <h3> {{ short_url }} </h3>
     <br><br>
     <a href="{% url 'main_page' %}"> Back to main page </a>
     

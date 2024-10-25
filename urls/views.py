@@ -18,3 +18,6 @@ def add_url(request):
         return render(request, 'shortened.html', {'short_url': short_url})
 
     return render(request, 'add_url.html')
+
+def redirect_to_short_url(request, short_url):
+    return render(request, 'short_url.html', {'short_url': short_url})

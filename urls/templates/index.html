@@ -11,7 +11,7 @@
 
     <ul>
         {% for url in urls %}
-            <a href=""> <li> {{ url.long_url }} </li> </a>
+            <a href="{% url 'short_url' url.short_url %}"> <li> {{ url.long_url }} </li> </a>
             <br>
             <br>
         {% endfor %}

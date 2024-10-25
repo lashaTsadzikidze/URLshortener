@@ -13,6 +13,9 @@
         {% for url in urls %}
             <a href="{% url 'short_url' url.short_url %}"> <li> {{ url.long_url }} </li> </a>
             <br>
+            <a href="{% url 'stats' url.short_url %}"> stats </a>
+            <br>
+            <br>
             <br>
         {% endfor %}
     </ul>

@@ -20,4 +20,11 @@ def add_url(request):
     return render(request, 'add_url.html')
 
 def redirect_to_short_url(request, short_url):
+    url = URL.objects.get(short_url=short_url)
+    url.visit_count += 1
+    url.save()
     return render(request, 'short_url.html', {'short_url': short_url})
+
+def stats(request, short_url):
+    url = URL.objects.get(short_url=short_url)
+    return render(request, 'stats.html', {'url': url})
